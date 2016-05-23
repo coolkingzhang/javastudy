@@ -19,5 +19,6 @@
   </properties>
   <modules>
     <module>javastudy-cache-memcache</module>
+    <module>javastudy-cache-redis</module>
   </modules>
 </project>

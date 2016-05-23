@@ -8,9 +8,7 @@
 		<artifactId>javastudy-cachen-parent</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<groupId>org.javastudy.cache</groupId>
 	<artifactId>javastudy-cache-memcache</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
 	<name>javastudy-cache-memcache</name>
 	<url>http://maven.apache.org</url>
 	<properties>
@@ -18,10 +16,25 @@
 	</properties>
 	<dependencies>
 		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>4.2.6.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>4.2.6.RELEASE</version>
+		</dependency>
+		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>3.8.1</version>
+			<version>4.12</version>
 			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.whalin</groupId>
+			<artifactId>Memcached-Java-Client</artifactId>
+			<version>3.0.2</version>
 		</dependency>
 		<dependency>
 			<groupId>net.spy</groupId>
