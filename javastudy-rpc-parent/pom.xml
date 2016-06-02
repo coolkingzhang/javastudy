@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>org.javastudy.rpc</groupId>
+  <artifactId>javastudy-rpc-parent</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+
+  <distributionManagement>
+    <site>
+      <id>website</id>
+      <url>scp://webhost.company.com/www/website</url>
+    </site>
+  </distributionManagement>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+  <modules>
+    <module>javastudy-rpc-thrift</module>
+    <module>javastudy-rpc-kyro</module>
+    <module>javastudy-rpc-fst</module>
+    <module>javastudy-rpc-hessign</module>
+    <module>javastudy-rpc-hetty</module>
+    <module>javastudy-rpc-rmi</module>
+    <module>javastudy-rpc-protobuf</module>
+    <module>javastudy-rpc-ice</module>
+    <module>javastudy-rpc-fastjson</module>
+    <module>javastudy-rpc-avro</module>
+    <module>javastudy-rpc-hprose</module>
+    <module>javastudy-rpc-grpc</module>
+    <module>javastudy-rpc-cxf</module>
+    <module>javastudy-rpc-axis2</module>
+  </modules>
+</project>
