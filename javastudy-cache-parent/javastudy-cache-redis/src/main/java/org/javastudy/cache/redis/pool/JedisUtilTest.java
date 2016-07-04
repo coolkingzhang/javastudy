@@ -5,6 +5,7 @@ import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.JedisPoolConfig;
 import redis.clients.jedis.Transaction;
 
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
@@ -24,6 +25,17 @@ public class JedisUtilTest {
 	}
 
 	@Test
+	public void testSetnx() {
+
+		System.out.println(jedis.setnx("lock99", new Date().toString()));
+		System.out.println(jedis.setnx("lock99", new Date().toString()));
+		
+		System.out.println(jedis.get("lock99"));
+
+		// }
+	}
+
+	// @Test
 	public void testGet() {
 		// while (true) {
 		jedis.set("aaaadddd", "redis key");
@@ -33,7 +45,7 @@ public class JedisUtilTest {
 		// }
 	}
 
-	@Test
+	// @Test
 	public void multi() {
 		Transaction tx = jedis.multi();
 		tx.incr("foo");

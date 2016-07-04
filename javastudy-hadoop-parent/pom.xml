@@ -24,5 +24,6 @@
     <module>javastudy-hadoop-hive</module>
     <module>javastudy-hadoop-cassandra</module>
     <module>javastudy-hadoop-spark</module>
+    <module>javastudy-hadoop-consul</module>
   </modules>
 </project>

@@ -11,7 +11,7 @@ import net.rubyeye.xmemcached.exception.MemcachedException;
 public class Xmemcached {
 
 	public static void main(String[] args) {
-		MemcachedClientBuilder builder = new XMemcachedClientBuilder(AddrUtil.getAddresses("127.0.0.1:11211"));
+		MemcachedClientBuilder builder = new XMemcachedClientBuilder(AddrUtil.getAddresses("10.73.128.105:11211"));
 		MemcachedClient memcachedClient;
 		try {
 			memcachedClient = builder.build();

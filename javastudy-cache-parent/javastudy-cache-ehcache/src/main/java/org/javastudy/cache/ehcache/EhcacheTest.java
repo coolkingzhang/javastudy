@@ -21,8 +21,8 @@ public class EhcacheTest {
 		for (int i = 0; i < names.length; i++) {
 			System.out.println(names[i]);
 		}
-
 		System.out.println("----------------------");
+		
 		// 得到一个cache对象
 		Cache cache1 = manager.getCache(names[0]);
 
@@ -38,7 +38,6 @@ public class EhcacheTest {
 		manager.addCache(cache2);
 
 		cache2.put(new Element("jimmy", "菩提树下的杨过"));
-
 		// 故意停1.5秒，以验证是否过期
 		Thread.sleep(1500);
 

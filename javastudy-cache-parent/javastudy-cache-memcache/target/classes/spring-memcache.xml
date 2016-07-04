@@ -25,33 +25,26 @@
 		<constructor-arg>
 			<value>memCachedPool</value>
 		</constructor-arg>
-
 		<property name="servers">
 			<list>
 				<value>${memcache.server}</value>
 			</list>
 		</property>
-
 		<property name="initConn">
 			<value>${memcache.initConn}</value>
 		</property>
-
 		<property name="minConn">
 			<value>${memcache.minConn}</value>
 		</property>
-
 		<property name="maxConn">
 			<value>${memcache.maxConn}</value>
 		</property>
-
 		<property name="maintSleep">
 			<value>${memcache.maintSleep}</value>
 		</property>
-
 		<property name="nagle">
 			<value>${memcache.nagle}</value>
 		</property>
-
 		<property name="socketTO">
 			<value>${memcache.socketTO}</value>
 		</property>

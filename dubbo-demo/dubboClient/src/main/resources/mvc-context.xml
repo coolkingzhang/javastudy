@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/mvc"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:p="http://www.springframework.org/schema/p" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd  
+                http://www.springframework.org/schema/aop  
+                http://www.springframework.org/schema/aop/spring-aop-4.0.xsd http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd  
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+        http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+	<!-- 加载Spring的全局配置文件 -->
+	<beans:import resource="root-context.xml" />
+
+	<!-- 通过component-scan 让Spring扫描org.swinglife.controller下的所有的类，让Spring的代码注解生效 -->
+	<context:component-scan base-package="org.test.controller"></context:component-scan>
+
+	<!-- 消费方应用名，用于计算依赖关系，不是匹配条件，不要与提供方一样 -->
+	<dubbo:application name="dubbo_consumer"></dubbo:application>
+	<!-- 使用zookeeper注册中心暴露服务地址 -->
+	
+	<dubbo:registry protocol="zookeeper"
+		address="10.73.128.85:2181,10.73.128.86:2181,10.73.128.87:2181" check="false" />
+	<!-- 要引用的服务 -->
+	<dubbo:reference interface="org.test.service.TestRegistryService"
+		id="testRegistryService"></dubbo:reference>
+
+</beans:beans>

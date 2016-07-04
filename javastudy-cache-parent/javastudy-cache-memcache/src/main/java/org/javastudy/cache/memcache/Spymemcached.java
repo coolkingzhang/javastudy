@@ -20,7 +20,7 @@ class User implements Serializable { // 必须将对象序列化才能保存
 public class Spymemcached {
 
 	public static void main(String[] args) throws IOException {
-		MemcachedClient c = new MemcachedClient(new InetSocketAddress("127.0.0.1", 11211));
+		MemcachedClient c = new MemcachedClient(new InetSocketAddress("10.73.128.105", 11211));
 
 		// 存取一个简单的Integer
 		// Store a value (async) for one hour

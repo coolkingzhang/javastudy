@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.springframework.org/schema/data/couchbase"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="couchbaseConnector" class="com.couchbase.client.java.Cluster">
+		<property name="serverAddress">
+			<value>${couchBase.server}</value>
+		</property>
+		<property name="name">
+			<value>${couchBase.name}</value>
+		</property>
+		<property name="pwd">
+			<value>${couchBase.pwd}</value>
+		</property>
+	</bean>
+</beans>

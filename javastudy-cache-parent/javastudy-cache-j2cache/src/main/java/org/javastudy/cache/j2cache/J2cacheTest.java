@@ -11,7 +11,7 @@ import net.oschina.j2cache.J2Cache;
 public class J2cacheTest {
 	public static void main(String[] args) {
 		CacheChannel cache = J2Cache.getChannel();
-		// cache.set("cache1", "key", "OSChina.net");
+//		cache.set("cache1", "key", "OSChina.net");
 		CacheObject obj = cache.get("cache1", "key");
 		System.out.println(obj.getRegion() + obj.getValue());
 		// cache.evict("cache1","key500");

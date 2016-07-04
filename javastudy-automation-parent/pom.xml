@@ -20,5 +20,6 @@
   <modules>
     <module>javastudy-automation-quartz</module>
     <module>javastudy-automation-task</module>
+    <module>javastudy-automation-elastic</module>
   </modules>
 </project>
