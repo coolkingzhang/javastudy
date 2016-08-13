@@ -21,5 +21,6 @@
     <module>javastudy-db-berkeleydb</module>
     <module>javastudy-db-jdbc</module>
     <module>javastudy-db-ssdb</module>
+    <module>javastudy-db-fastdfs</module>
   </modules>
 </project>

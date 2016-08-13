@@ -10,7 +10,7 @@
                         http://www.dangdang.com/schema/ddframe/job/job.xsd
                         ">
 	<!--配置作业注册中心 -->
-	<reg:zookeeper id="regCenter" server-lists="127.0.0.1:2181"
+	<reg:zookeeper id="regCenter" server-lists="10.73.128.85:2181"
 		namespace="tcl-job" base-sleep-time-milliseconds="1000"
 		max-sleep-time-milliseconds="3000" max-retries="3" />
 
